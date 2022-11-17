@@ -19,6 +19,7 @@ const RandomProgress = (props) => {
       clearInterval(timer);
     };
   }, [progress]);
+
   return <LinearProgress color={color} variant="determinate" value={progress.value}/>;
 }
 

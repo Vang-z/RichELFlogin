@@ -5,7 +5,7 @@ export const initialLoginState = {
   username: "",
   pwd: "",
   agreement: false,
-  rememberMe: false
+  rememberMe: false,
 }
 
 export const loginSlice = createSlice({

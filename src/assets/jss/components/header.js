@@ -10,10 +10,10 @@ const headerStyles = makeStyles()({
     display: "flex",
     justifyContent: "flex-start",
     flexDirection: "row-reverse",
-    zIndex: 3
+    zIndex: 3,
   },
   button: {
-    color: warningColor[5]
+    color: warningColor[5],
   }
 });
 

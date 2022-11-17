@@ -19,7 +19,7 @@ const root = {
     color: grayColor[20],
   },
   "::selection": {
-    background: `rgba(0, 0, 0, 0.32)`
+    background: `rgba(0, 0, 0, 0.32)`,
   }
 };
 

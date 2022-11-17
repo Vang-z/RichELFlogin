@@ -17,7 +17,7 @@ const validationBoxStyles = makeStyles()({
     backgroundPositionX: 10,
     backgroundPositionY: -158,
     backgroundSize: "350%",
-    margin: "0 auto"
+    margin: "0 auto",
   }
 });
 

@@ -8,8 +8,7 @@ import theme from "./assets/jss/theme";
 
 function App() {
   useEffect(() => {
-    document.oncontextmenu = function (e) {
-      e = e || window.event;
+    document.oncontextmenu = function (_) {
       return false;
     };
     const noDragSelector = "input, a, button";

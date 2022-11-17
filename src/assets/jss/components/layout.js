@@ -28,7 +28,7 @@ const layoutStyles = makeStyles()({
       width: 70,
       height: 1440,
       opacity: "20%",
-      transform: "rotate(-45deg)"
+      transform: "rotate(-45deg)",
     },
     "&:hover": {
       "&:after": {
@@ -41,7 +41,7 @@ const layoutStyles = makeStyles()({
     position: "relative",
     width: 220,
     height: 530,
-    marginTop: 18
+    marginTop: 18,
   },
   wrapper: {
     position: "absolute",

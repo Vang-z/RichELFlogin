@@ -13,8 +13,8 @@ const footerStyles = makeStyles()({
       display: "flex",
       color: grayColor[4],
       fontSize: 12,
-      cursor: "default"
-    }
+      cursor: "default",
+    },
   },
   powerby: {
     display: "flex",
@@ -25,14 +25,14 @@ const footerStyles = makeStyles()({
     height: "13px !important",
     margin: 2,
     marginLeft: 4,
-    cursor: "pointer"
+    cursor: "pointer",
   },
   muiIcon: {
     width: "12px !important",
     height: "12px !important",
     margin: 2,
     marginLeft: 4,
-    cursor: "pointer"
+    cursor: "pointer",
   },
   version: {
     position: "absolute",

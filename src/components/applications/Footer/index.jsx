@@ -17,7 +17,7 @@ function Footer() {
     }).catch(_ => {
       setVer("-.-.-");
     })
-  }, [])
+  }, []);
 
   return <Box className={classes.root}>
     <Box component={"span"}>COPYRIGHT BY Vang-z. ALL RIGHTS RESERVED.</Box>

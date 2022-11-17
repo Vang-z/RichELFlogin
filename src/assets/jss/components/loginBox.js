@@ -11,18 +11,18 @@ const loginBoxStyles = makeStyles()({
     height: 24,
     marginBottom: 6,
     "&.security": {
-      marginBottom: 9
+      marginBottom: 9,
     },
     "&.pwd": {
       marginTop: 6,
-      justifyContent: "space-evenly"
+      justifyContent: "space-evenly",
     },
     "&.progress": {
       display: "initial",
       width: 178,
       margin: "0 auto",
       "& span": {
-        borderRadius: 5
+        borderRadius: 5,
       }
     }
   },
@@ -33,7 +33,7 @@ const loginBoxStyles = makeStyles()({
     backgroundImage: `url(${fonts})`,
     backgroundRepeat: "no-repeat",
     backgroundPositionX: 0,
-    backgroundPositionY: 2
+    backgroundPositionY: 2,
   },
   ipt: {
     position: "relative",
@@ -46,10 +46,10 @@ const loginBoxStyles = makeStyles()({
       padding: "4px 6px 3px",
       fontSize: 12,
       lineHeight: "20px",
-      fontFamily: "JetBrainsMono"
+      fontFamily: "JetBrainsMono",
     },
     "& .MuiFilledInput-root:before, .MuiFilledInput-root:after": {
-      borderBottom: "none !important"
+      borderBottom: "none !important",
     }
   },
   pwd: {
@@ -59,21 +59,21 @@ const loginBoxStyles = makeStyles()({
     backgroundImage: `url(${fonts})`,
     backgroundRepeat: "no-repeat",
     backgroundPositionX: 0,
-    backgroundPositionY: -12
+    backgroundPositionY: -12,
   },
   boxWrapper: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    height: 24
+    height: 24,
   },
   checkboxWrapper: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
   },
   checkbox: {
     color: grayColor[4],
-    padding: 4
+    padding: 4,
   },
   agreement: {
     position: "relative",
@@ -86,7 +86,7 @@ const loginBoxStyles = makeStyles()({
     backgroundPositionX: -36,
     backgroundPositionY: 0,
     border: "none",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   rememberMe: {
     position: "relative",
@@ -99,7 +99,7 @@ const loginBoxStyles = makeStyles()({
     backgroundPositionX: -36,
     backgroundPositionY: -14,
     border: "none",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   btnWrapper: {
     display: "flex",
@@ -107,7 +107,7 @@ const loginBoxStyles = makeStyles()({
     justifyContent: "center",
     height: 36,
     marginTop: 12,
-    marginBottom: 12
+    marginBottom: 12,
   },
   loginBtn: {
     position: "relative",
@@ -124,7 +124,7 @@ const loginBoxStyles = makeStyles()({
     "&.Mui-disabled": {
       backgroundColor: dangerColor[0],
       cursor: "not-allowed",
-      pointerEvents: "initial"
+      pointerEvents: "initial",
     }
   },
   divider: {
@@ -139,7 +139,7 @@ const loginBoxStyles = makeStyles()({
     justifyContent: "space-between",
     height: 20,
     padding: "0 26px",
-    marginTop: 12
+    marginTop: 12,
   },
   securityBtn: {
     position: "relative",
@@ -175,13 +175,13 @@ const loginBoxStyles = makeStyles()({
     alignItems: "center",
     justifyContent: "space-between",
     height: 20,
-    marginTop: 20
+    marginTop: 20,
   },
   infoWrapper: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    height: 20
+    height: 20,
   },
   player: {
     position: "relative",
@@ -190,7 +190,7 @@ const loginBoxStyles = makeStyles()({
     backgroundImage: `url(${fonts})`,
     backgroundRepeat: "no-repeat",
     backgroundPositionX: 0,
-    backgroundPositionY: -27
+    backgroundPositionY: -27,
   },
   playerCount: {
     position: "relative",
@@ -198,7 +198,7 @@ const loginBoxStyles = makeStyles()({
     width: 24,
     color: grayColor[4],
     fontSize: 13,
-    cursor: "default"
+    cursor: "default",
   },
   ping: {
     position: "relative",
@@ -207,14 +207,14 @@ const loginBoxStyles = makeStyles()({
     backgroundImage: `url(${fonts})`,
     backgroundRepeat: "no-repeat",
     backgroundPositionX: 1,
-    backgroundPositionY: -187
+    backgroundPositionY: -187,
   },
   pingValue: {
     position: "relative",
     top: 1,
     width: 40,
     fontSize: 13,
-    cursor: "default"
+    cursor: "default",
   },
 });
 

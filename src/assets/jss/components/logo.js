@@ -15,7 +15,7 @@ const logoStyles = makeStyles()({
     backgroundImage: `url(${logo})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "100%",
-    margin: "34px auto 0"
+    margin: "34px auto 0",
   }
 });
 
