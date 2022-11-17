@@ -82,6 +82,14 @@ const securityBoxStyles = makeStyles()({
       fontSize: 12,
       lineHeight: "20px",
       fontFamily: "JetBrainsMono",
+      "&.Mui-disabled": {
+        "WebkitTextFillColor": grayColor[11],
+        cursor: "not-allowed",
+        pointerEvents: "initial",
+        "::selection": {
+          background: "transparent",
+        }
+      }
     },
     "& .MuiFilledInput-root:before, .MuiFilledInput-root:after": {
       borderBottom: "none !important",
@@ -112,14 +120,29 @@ const securityBoxStyles = makeStyles()({
     height: 25,
     top: 1,
     backgroundColor: grayColor[20],
-    backgroundImage: `url(${fonts})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPositionX: -168,
-    backgroundPositionY: -53,
     borderRadius: 3,
+    textTransform: "lowercase",
+    "& span": {
+      position: "relative",
+      top: 1,
+      color: grayColor[4],
+      fontSize: 12,
+      fontFamily: "JetBrainsMono",
+    },
     "&:hover": {
       backgroundColor: grayColor[21],
-    }
+    },
+    "&.Mui-disabled": {
+      backgroundColor: grayColor[21],
+      cursor: "not-allowed",
+      pointerEvents: "initial",
+    },
+    "&.normal": {
+      backgroundImage: `url(${fonts})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPositionX: -168,
+      backgroundPositionY: -53,
+    },
   },
   pwdBtn: {
     position: "relative",
@@ -134,6 +157,11 @@ const securityBoxStyles = makeStyles()({
       "&:hover": {
         backgroundColor: dangerColor[1],
       },
+      "&.Mui-disabled": {
+        backgroundColor: dangerColor[0],
+        cursor: "not-allowed",
+        pointerEvents: "initial",
+      }
     },
     "&.discard": {
       backgroundColor: grayColor[7],
@@ -144,7 +172,12 @@ const securityBoxStyles = makeStyles()({
       "&:hover": {
         backgroundColor: grayColor[6],
       },
-    }
+      "&.Mui-disabled": {
+        backgroundColor: grayColor[7],
+        cursor: "not-allowed",
+        pointerEvents: "initial",
+      }
+    },
   },
   progressInfo: {
     position: "relative",
@@ -155,10 +188,10 @@ const securityBoxStyles = makeStyles()({
     backgroundPositionY: 2,
     margin: "0 auto",
     "&.success": {
-      backgroundPositionX: -164,
+      backgroundPositionX: -104,
     },
     "&.error": {
-      backgroundPositionX: -104,
+      backgroundPositionX: -164,
     }
   }
 });

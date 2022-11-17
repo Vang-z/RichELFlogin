@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import cx from "classnames";
 import Box from "@mui/material/Box";
@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
 import RandomProgress from "../../base/RandomProgress/index";
+import {CAPTCHA_COUNTDOWN} from "../../../utils/utils";
 import {loginSlice} from "../../../redux/login/slice";
 import {securitySlice} from "../../../redux/security/slice";
 import {progressSlice} from "../../../redux/progress/slice";
@@ -19,6 +20,7 @@ const SecurityBox = (props) => {
   const login = useSelector(s => s.login);
   const security = useSelector(s => s.security);
   const progress = useSelector(s => s.progress);
+  const [captchaCountdown, setCaptchaCountdown] = useState(CAPTCHA_COUNTDOWN);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -27,14 +29,28 @@ const SecurityBox = (props) => {
         clearInterval(timer);
         setTimeout(() => {
           dispatch(securitySlice.actions.setProgress(false));
-          handleClickDiscardPwd();
-        }, 1000);
+          if (security.result === "success") handleClickDiscardPwd();
+          else dispatch(progressSlice.actions.setValue(0));
+        }, 1500);
       }
     }, 500);
     return () => {
       clearInterval(timer);
     };
   }, [progress]);
+
+  const handleClickCaptcha = () => {
+    const timer = setInterval(() => {
+      setCaptchaCountdown(countdown => {
+        if (countdown <= 0) {
+          clearInterval(timer);
+          return CAPTCHA_COUNTDOWN;
+        }
+        return countdown - 1;
+      });
+    }, 1000);
+  }
+
 
   const handleClickChangePwd = () => {
     dispatch(securitySlice.actions.setProgress(true));
@@ -76,9 +92,14 @@ const SecurityBox = (props) => {
         variant={"filled"} value={security.captcha} tabIndex={-1} disabled={!security.open || security.progress}
         onChange={event => dispatch(securitySlice.actions.setCaptcha(event.target.value))}/>
       <Button
-        className={classes.captchaBtn} variant={"contained"}
-        tabIndex={-1} disabled={!security.open || security.progress}
-        onClick={() => console.log("captchaBtn")}/>
+        className={cx({
+          [classes.captchaBtn]: true,
+          "normal": captchaCountdown === CAPTCHA_COUNTDOWN
+        })} variant={"contained"}
+        tabIndex={-1} disabled={!security.open || security.progress || captchaCountdown < CAPTCHA_COUNTDOWN}
+        onClick={handleClickCaptcha}>
+        {captchaCountdown < CAPTCHA_COUNTDOWN && <span>{captchaCountdown}s</span>}
+      </Button>
     </Box>
     <Box className={cx(classes.iptWrapper, "security", "pwd")}>
       <Button
@@ -93,8 +114,7 @@ const SecurityBox = (props) => {
     {security.progress && <Box
       className={cx(classes.iptWrapper, "security", "progress")}>
       <RandomProgress color={"error"}/>
-      {progress.value === 100 && <Box className={cx(classes.progressInfo,
-        Math.random() > 0.5 ? "success" : "error")}/>}
+      {progress.value === 100 && <Box className={cx(classes.progressInfo, security.result)}/>}
     </Box>}
   </Box>
 }

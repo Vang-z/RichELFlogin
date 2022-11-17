@@ -7,6 +7,7 @@ export const initialSecurityState = {
   newPwd: "",
   captcha: "",
   progress: false,
+  result: "error",
 }
 
 export const securitySlice = createSlice({
