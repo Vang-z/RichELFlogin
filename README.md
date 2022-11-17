@@ -14,5 +14,5 @@ Thanks
 ------
 
 I would like to thank
-  - [RSLogin](http://d.pvftool.com/) for their technical support.
-  - JetBrains for Open Source licence.
+-  [RSLogin](http://d.pvftool.com/) for their technical support.
+-  JetBrains for Open Source licence.
