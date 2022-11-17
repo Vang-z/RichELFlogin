@@ -11,7 +11,7 @@ const persistConfig = {
   key: 'root',
   storage,
   whitelist: ['login'],
-}
+};
 
 const rootReducer = combineReducers({
   login: loginSlice.reducer,

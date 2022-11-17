@@ -30,31 +30,31 @@ const LoginBox = (props) => {
   useEffect(() => {
     netlag().then(res => setState({...state, ping: res}))
       .catch(err => setState({...state, ping: err}));
-  }, [])
+  }, []);
 
   const handleClickAgreement = () => {
     dispatch(loginSlice.actions.setAgreement(!login.agreement));
-  }
+  };
 
   const handleClickRememberMe = () => {
     const rememberMe = login.rememberMe;
     dispatch(loginSlice.actions.setRememberMe(!rememberMe));
-  }
+  };
 
   const handleClickLogin = async () => {
     const param = "Wob6sxh/aBKZmdyU9ZV7FVXSBW/wDQ6QPgZthIC4+Li6v+K4rlXmB7Lqdr5fBLgHgLbmQyO8fPdAEmzk1ocNWFhY0bObAmkQBYTHUcqjCj/rDivB2ZPMPg0zNzEITA9VoEmUacY+n9j365yvG4oUUjD+j9WKs9ChUhiThQlwYge/s+dDU0xxgKz3StHAE9jV6aaiXBqzmtpF1UXZ4YdqN5uqdk9cKtiNQGGL5Q7fsBMpVkeHk/PBOfU2iORcMkqlU26SMiHT0zFJyNBX0ozDWKS0at9X5iPOQWeq2j88MVS+eQd/w2qbsG0d+JAR/5M3hKU8HX4u/9Aakv7GXXmY6g==";
     const command = await new Command('login', param)
     const child = await command.spawn();
     if (child.pid) await appWindow.hide();
-  }
+  };
 
   const handleClickSecurity = () => {
     dispatch(securitySlice.actions.setOpen(true));
-  }
+  };
 
   const handleClickValidation = () => {
     dispatch(validationSlice.actions.setOpen(true));
-  }
+  };
 
   const pingColor = state.ping === "---" ? "inherit"
     : parseInt(state.ping) < 50 ? successColor[0]

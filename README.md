@@ -8,13 +8,11 @@ REL
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/1d7e3de166a74df4a7b1df689082217c)](https://www.codacy.com/gh/Vang-z/RichELFlogin/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Vang-z/RichELFlogin&amp;utm_campaign=Badge_Grade)
 [![Github All Releases](https://img.shields.io/github/downloads/Vang-z/RichELFlogin/total.svg)](https://github.com/Vang-z/RichELFlogin/releases)
 
-
 > ✨ **REL** is a launcher for DFO that simply works. It's base on [Tauri](https://tauri.app/) and [Mui](https://mui.com/) ✨
-
 
 Thanks
 ------
 
 I would like to thank
-- [RSLogin](http://d.pvftool.com/) for their technical support.
-- JetBrains for Open Source licence.
+  - [RSLogin](http://d.pvftool.com/) for their technical support.
+  - JetBrains for Open Source licence.

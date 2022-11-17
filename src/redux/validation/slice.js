@@ -3,7 +3,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 export const initialValidationState = {
   open: false,
-}
+};
 
 export const validationSlice = createSlice({
   name: 'validation',
