@@ -101,8 +101,8 @@ const securityBoxStyles = makeStyles()({
     height: 14,
     backgroundImage: `url(${fonts})`,
     backgroundRepeat: "no-repeat",
-    backgroundPositionX: 0,
-    backgroundPositionY: -200,
+    backgroundPositionX: -192,
+    backgroundPositionY: -26,
   },
   captcha: {
     position: "relative",
@@ -110,8 +110,8 @@ const securityBoxStyles = makeStyles()({
     height: 14,
     backgroundImage: `url(${fonts})`,
     backgroundRepeat: "no-repeat",
-    backgroundPositionX: -54,
-    backgroundPositionY: -200,
+    backgroundPositionX: 0,
+    backgroundPositionY: -54,
   },
   captchaBtn: {
     position: "relative",
@@ -137,12 +137,16 @@ const securityBoxStyles = makeStyles()({
       cursor: "not-allowed",
       pointerEvents: "initial",
     },
-    "&.normal": {
+    "& .text": {
+      position: "absolute",
+      width: 76,
+      height: 14,
+      top: 4,
       backgroundImage: `url(${fonts})`,
       backgroundRepeat: "no-repeat",
-      backgroundPositionX: -168,
-      backgroundPositionY: -53,
-    },
+      backgroundPositionX: -103,
+      backgroundPositionY: -12,
+    }
   },
   pwdBtn: {
     position: "relative",
@@ -161,7 +165,17 @@ const securityBoxStyles = makeStyles()({
         backgroundColor: dangerColor[0],
         cursor: "not-allowed",
         pointerEvents: "initial",
-      }
+      },
+      "& .text": {
+        position: "absolute",
+        width: 60,
+        height: 14,
+        top: 4,
+        backgroundImage: `url(${fonts})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPositionX: -180,
+        backgroundPositionY: -12,
+      },
     },
     "&.discard": {
       backgroundColor: grayColor[7],
@@ -176,7 +190,17 @@ const securityBoxStyles = makeStyles()({
         backgroundColor: grayColor[7],
         cursor: "not-allowed",
         pointerEvents: "initial",
-      }
+      },
+      "& .text": {
+        position: "absolute",
+        width: 60,
+        height: 14,
+        top: 4,
+        backgroundImage: `url(${fonts})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPositionX: -69,
+        backgroundPositionY: -26,
+      },
     },
   },
   progressInfo: {

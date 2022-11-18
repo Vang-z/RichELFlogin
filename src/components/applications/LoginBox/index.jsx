@@ -23,8 +23,7 @@ const LoginBox = (props) => {
   const security = useSelector(s => s.security);
   const validation = useSelector(s => s.validation);
   const [state, setState] = useState({
-    player: "0",
-    ping: "---",
+    player: "0", ping: "---",
   });
 
   useEffect(() => {
@@ -56,10 +55,7 @@ const LoginBox = (props) => {
     dispatch(validationSlice.actions.setOpen(true));
   };
 
-  const pingColor = state.ping === "---" ? "inherit"
-    : parseInt(state.ping) < 50 ? successColor[0]
-      : parseInt(state.ping) < 200 ? warningColor[0]
-        : dangerColor[2];
+  const pingColor = state.ping === "---" ? "inherit" : parseInt(state.ping) < 50 ? successColor[0] : parseInt(state.ping) < 200 ? warningColor[0] : dangerColor[2];
 
   return <Box className={className}>
     <Box className={classes.iptWrapper}>
@@ -100,16 +96,22 @@ const LoginBox = (props) => {
       <Button
         className={classes.loginBtn} variant={"contained"} tabIndex={-1}
         disabled={!login.agreement || !login.username || !login.pwd}
-        onClick={handleClickLogin}/>
+        onClick={handleClickLogin}>
+        <Box className={"text"} component={"span"}/>
+      </Button>
     </Box>
     <Divider className={classes.divider}/>
     <Box className={classes.additionalBtnWrapper}>
       <Button
         className={classes.securityBtn} variant={"contained"} tabIndex={-1}
-        onClick={handleClickSecurity}/>
+        onClick={handleClickSecurity}>
+        <Box className={"text"} component={"span"}/>
+      </Button>
       <Button
         className={classes.validateBtn} variant={"contained"} tabIndex={-1}
-        onClick={handleClickValidation}/>
+        onClick={handleClickValidation}>
+        <Box className={"text"} component={"span"}/>
+      </Button>
     </Box>
     <Box className={classes.additionalInfoWrapper}>
       <Box className={classes.infoWrapper}>

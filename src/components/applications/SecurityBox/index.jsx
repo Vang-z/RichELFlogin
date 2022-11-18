@@ -40,6 +40,7 @@ const SecurityBox = (props) => {
   }, [progress]);
 
   const handleClickCaptcha = () => {
+    setCaptchaCountdown(captchaCountdown - 1);
     const timer = setInterval(() => {
       setCaptchaCountdown(countdown => {
         if (countdown <= 0) {
@@ -98,18 +99,23 @@ const SecurityBox = (props) => {
         })} variant={"contained"}
         tabIndex={-1} disabled={!security.open || security.progress || captchaCountdown < CAPTCHA_COUNTDOWN}
         onClick={handleClickCaptcha}>
-        {captchaCountdown < CAPTCHA_COUNTDOWN && <span>{captchaCountdown}s</span>}
+        {captchaCountdown === CAPTCHA_COUNTDOWN && <Box className={"text"} component={"span"}/>}
+        {captchaCountdown < CAPTCHA_COUNTDOWN && <Box component={"span"}>{captchaCountdown}s</Box>}
       </Button>
     </Box>
     <Box className={cx(classes.iptWrapper, "security", "pwd")}>
       <Button
         className={cx(classes.pwdBtn, "change")} variant={"contained"}
         tabIndex={-1} disabled={!security.open || security.progress}
-        onClick={handleClickChangePwd}/>
+        onClick={handleClickChangePwd}>
+        <Box className={"text"} component={"span"}/>
+      </Button>
       <Button
         className={cx(classes.pwdBtn, "discard")} variant={"contained"}
         tabIndex={-1} disabled={!security.open || security.progress}
-        onClick={handleClickDiscardPwd}/>
+        onClick={handleClickDiscardPwd}>
+        <Box className={"text"} component={"span"}/>
+      </Button>
     </Box>
     {security.progress && <Box
       className={cx(classes.iptWrapper, "security", "progress")}>

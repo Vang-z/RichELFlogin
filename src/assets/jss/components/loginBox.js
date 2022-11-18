@@ -47,6 +47,14 @@ const loginBoxStyles = makeStyles()({
       fontSize: 12,
       lineHeight: "20px",
       fontFamily: "JetBrainsMono",
+      "&.Mui-disabled": {
+        "WebkitTextFillColor": grayColor[11],
+        cursor: "not-allowed",
+        pointerEvents: "initial",
+        "::selection": {
+          background: "transparent",
+        }
+      }
     },
     "& .MuiFilledInput-root:before, .MuiFilledInput-root:after": {
       borderBottom: "none !important",
@@ -114,10 +122,6 @@ const loginBoxStyles = makeStyles()({
     width: 168,
     height: 36,
     backgroundColor: dangerColor[0],
-    backgroundImage: `url(${fonts})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPositionX: 55,
-    backgroundPositionY: -48,
     "&:hover": {
       backgroundColor: dangerColor[1],
     },
@@ -125,6 +129,14 @@ const loginBoxStyles = makeStyles()({
       backgroundColor: dangerColor[0],
       cursor: "not-allowed",
       pointerEvents: "initial",
+    },
+    "& .text": {
+      width: 64,
+      height: 14,
+      backgroundImage: `url(${fonts})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPositionX: -52,
+      backgroundPositionY: -55,
     }
   },
   divider: {
@@ -147,13 +159,18 @@ const loginBoxStyles = makeStyles()({
     minWidth: 68,
     height: 20,
     backgroundColor: grayColor[7],
-    backgroundImage: `url(${fonts})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPositionX: 4,
-    backgroundPositionY: -120,
     borderRadius: 3,
     "&:hover": {
       backgroundColor: grayColor[6],
+    },
+    "& .text": {
+      position: "absolute",
+      width: 64,
+      height: 14,
+      backgroundImage: `url(${fonts})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPositionX: 2,
+      backgroundPositionY: -41,
     }
   },
   validateBtn: {
@@ -168,6 +185,15 @@ const loginBoxStyles = makeStyles()({
     borderRadius: 3,
     "&:hover": {
       backgroundColor: grayColor[6],
+    },
+    "& .text": {
+      position: "absolute",
+      width: 76,
+      height: 14,
+      backgroundImage: `url(${fonts})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPositionX: -63,
+      backgroundPositionY: -41,
     }
   },
   additionalInfoWrapper: {
@@ -206,8 +232,8 @@ const loginBoxStyles = makeStyles()({
     height: 14,
     backgroundImage: `url(${fonts})`,
     backgroundRepeat: "no-repeat",
-    backgroundPositionX: 1,
-    backgroundPositionY: -187,
+    backgroundPositionX: -138,
+    backgroundPositionY: -41,
   },
   pingValue: {
     position: "relative",
