@@ -15,7 +15,6 @@ const layoutStyles = makeStyles()({
     backgroundImage: `url(${background})`,
     backgroundRepeat: "no-repeat",
     borderRadius: 10,
-    opacity: 0.97,
     overflow: "hidden",
     ...boxShadow,
     "&:after": {

@@ -61,14 +61,14 @@ const LoginBox = (props) => {
     <Box className={classes.iptWrapper}>
       <Box className={classes.username}/>
       <TextField
-        className={classes.ipt} variant={"filled"}
+        className={classes.ipt} variant={"filled"} autoComplete={"off"}
         value={login.username} tabIndex={-1} disabled={security.open || validation.open}
         onChange={event => dispatch(loginSlice.actions.setUsername(event.target.value))}/>
     </Box>
     <Box className={classes.iptWrapper}>
       <Box className={classes.pwd}/>
       <TextField
-        className={classes.ipt} variant={"filled"} type={"password"}
+        className={classes.ipt} variant={"filled"} type={"password"} autoComplete={"off"}
         value={login.pwd} tabIndex={-1} disabled={security.open || validation.open}
         onChange={event => dispatch(loginSlice.actions.setPwd(event.target.value))}/>
     </Box>

@@ -68,28 +68,28 @@ const SecurityBox = (props) => {
     <Box className={cx(classes.iptWrapper, "security")}>
       <Box className={classes.username}/>
       <TextField
-        className={classes.securityIpt} variant={"filled"}
+        className={classes.securityIpt} variant={"filled"} autoComplete={"off"}
         value={login.username} tabIndex={-1} disabled={!security.open || security.progress}
         onChange={event => dispatch(loginSlice.actions.setUsername(event.target.value))}/>
     </Box>
     <Box className={cx(classes.iptWrapper, "security")}>
       <Box className={classes.pwd}/>
       <TextField
-        className={classes.securityIpt} variant={"filled"} type={"password"}
+        className={classes.securityIpt} variant={"filled"} type={"password"} autoComplete={"off"}
         value={security.pwd} tabIndex={-1} disabled={!security.open || security.progress}
         onChange={event => dispatch(securitySlice.actions.setPwd(event.target.value))}/>
     </Box>
     <Box className={cx(classes.iptWrapper, "security")}>
       <Box className={classes.newPwd}/>
       <TextField
-        className={classes.securityIpt} variant={"filled"} type={"password"}
+        className={classes.securityIpt} variant={"filled"} type={"password"} autoComplete={"off"}
         value={security.newPwd} tabIndex={-1} disabled={!security.open || security.progress}
         onChange={event => dispatch(securitySlice.actions.setNewPwd(event.target.value))}/>
     </Box>
     <Box className={cx(classes.iptWrapper, "security")}>
       <Box className={classes.captcha}/>
       <TextField
-        className={cx(classes.securityIpt, "captcha")}
+        className={cx(classes.securityIpt, "captcha")} autoComplete={"off"}
         variant={"filled"} value={security.captcha} tabIndex={-1} disabled={!security.open || security.progress}
         onChange={event => dispatch(securitySlice.actions.setCaptcha(event.target.value))}/>
       <Button

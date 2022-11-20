@@ -154,10 +154,6 @@ const securityBoxStyles = makeStyles()({
     height: 24,
     "&.change": {
       backgroundColor: dangerColor[0],
-      backgroundImage: `url(${fonts})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPositionX: -180,
-      backgroundPositionY: -86,
       "&:hover": {
         backgroundColor: dangerColor[1],
       },
@@ -179,10 +175,6 @@ const securityBoxStyles = makeStyles()({
     },
     "&.discard": {
       backgroundColor: grayColor[7],
-      backgroundImage: `url(${fonts})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPositionX: -180,
-      backgroundPositionY: -118,
       "&:hover": {
         backgroundColor: grayColor[6],
       },
