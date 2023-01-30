@@ -14,11 +14,8 @@
     "allowlist": {
       "all": true,
       "shell": {
-        // enable all shell APIs
         "all": true,
-        // enable process spawn APIs
         "execute": true,
-        // enable spawning sidecars
         "open": true,
         "scope": [
           {

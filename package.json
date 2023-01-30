@@ -1,33 +1,36 @@
 {
-  "name": "login",
+  "name": "login4ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "tauri": "tauri dev"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.10.9",
-    "@mui/material": "^5.10.13",
-    "@reduxjs/toolkit": "^1.9.0",
-    "@tauri-apps/api": "^1.1.0",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.6",
+    "@reduxjs/toolkit": "^1.9.2",
+    "@tauri-apps/api": "^1.2.0",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "redux-persist": "^6.0.0",
-    "tss-react": "^4.4.4"
+    "tss-react": "^4.5.2"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.1.0",
+    "@tauri-apps/cli": "^1.2.2",
+    "@types/node": "^18.7.10",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.0.0",
-    "vite": "^3.0.2"
+    "@types/react-redux": "^7.1.25",
+    "@vitejs/plugin-react": "^3.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^4.0.0"
   }
 }

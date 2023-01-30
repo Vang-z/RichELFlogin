@@ -1,7 +1,14 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice ,PayloadAction} from "@reduxjs/toolkit";
 
-
-export const initialSecurityState = {
+interface securityState{
+  open: boolean;
+  pwd: string;
+  newPwd: string;
+  captcha: string;
+  progress: boolean;
+  result: string;
+}
+export const initialSecurityState:securityState = {
   open: false,
   pwd: "",
   newPwd: "",
@@ -14,19 +21,19 @@ export const securitySlice = createSlice({
   name: 'security',
   initialState: initialSecurityState,
   reducers: {
-    setOpen: (state, action) => {
+    setOpen: (state, action:PayloadAction<boolean>) => {
       state.open = action.payload;
     },
-    setPwd: (state, action) => {
+    setPwd: (state, action:PayloadAction<string>) => {
       state.pwd = action.payload;
     },
-    setNewPwd: (state, action) => {
+    setNewPwd: (state, action:PayloadAction<string>) => {
       state.newPwd = action.payload;
     },
-    setCaptcha: (state, action) => {
+    setCaptcha: (state, action:PayloadAction<string>) => {
       state.captcha = action.payload;
     },
-    setProgress: (state, action) => {
+    setProgress: (state, action:PayloadAction<boolean>) => {
       state.progress = action.payload;
     },
     clear: state => {

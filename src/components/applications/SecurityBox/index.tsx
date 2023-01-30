@@ -1,11 +1,12 @@
+import React from "react"
 import {useEffect, useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useAppDispatch , useSelector} from "../../../redux/hooks";
 import cx from "classnames";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
-import RandomProgress from "../../base/RandomProgress/index";
+import RandomProgress from "../../base/RandomProgress";
 import {CAPTCHA_COUNTDOWN} from "../../../utils/utils";
 import {loginSlice} from "../../../redux/login/slice";
 import {securitySlice} from "../../../redux/security/slice";
@@ -13,10 +14,10 @@ import {progressSlice} from "../../../redux/progress/slice";
 import securityBoxStyles from "../../../assets/jss/components/securityBox";
 
 
-const SecurityBox = (props) => {
+const SecurityBox:React.FC<any> = (props) => {
   const {className} = props;
   const {classes} = securityBoxStyles();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const login = useSelector(s => s.login);
   const security = useSelector(s => s.security);
   const progress = useSelector(s => s.progress);

@@ -1,3 +1,4 @@
+import React from "react";
 import {useState} from "react";
 import cx from "classnames";
 import {useDispatch} from "react-redux";
@@ -12,7 +13,7 @@ import {validationSlice} from "../../../redux/validation/slice";
 import validationBoxStyles from "../../../assets/jss/components/validationBox";
 
 
-const ValidationBox = (props) => {
+const ValidationBox:React.FC<any> = (props) => {
   const {className} = props;
   const {classes} = validationBoxStyles();
   const [state, _] = useState({

@@ -1,7 +1,12 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice ,PayloadAction} from "@reduxjs/toolkit";
 
-
-export const initialLoginState = {
+interface loginState{
+  username: string;
+  pwd: string;
+  agreement: boolean;
+  rememberMe: boolean;
+}
+export const initialLoginState : loginState= {
   username: "",
   pwd: "",
   agreement: false,
@@ -12,16 +17,16 @@ export const loginSlice = createSlice({
   name: 'auth',
   initialState: initialLoginState,
   reducers: {
-    setUsername: (state, action) => {
+    setUsername: (state, action: PayloadAction<string>) => {
       state.username = action.payload;
     },
-    setPwd: (state, action) => {
+    setPwd: (state, action: PayloadAction<string>) => {
       state.pwd = action.payload;
     },
-    setAgreement: (state, action) => {
+    setAgreement: (state, action: PayloadAction<boolean>) => {
       state.agreement = action.payload;
     },
-    setRememberMe: (state, action) => {
+    setRememberMe: (state, action: PayloadAction<boolean>) => {
       state.rememberMe = action.payload;
     },
     clear: state => {

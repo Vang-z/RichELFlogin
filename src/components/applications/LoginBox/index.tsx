@@ -1,7 +1,8 @@
+import React from "react"
 import {useEffect, useState} from "react";
 import {Command} from "@tauri-apps/api/shell";
 import {appWindow} from "@tauri-apps/api/window";
-import {useDispatch, useSelector} from "react-redux";
+import {useAppDispatch , useSelector} from "../../../redux/hooks";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Checkbox from "@mui/material/Checkbox";
@@ -15,10 +16,10 @@ import loginBoxStyles from "../../../assets/jss/components/loginBox";
 import {dangerColor, successColor, warningColor} from "../../../assets/jss/base/mainStyle";
 
 
-const LoginBox = (props) => {
+const LoginBox:React.FC<any> = (props) => {
   const {className} = props;
   const {classes} = loginBoxStyles();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const login = useSelector(s => s.login);
   const security = useSelector(s => s.security);
   const validation = useSelector(s => s.validation);

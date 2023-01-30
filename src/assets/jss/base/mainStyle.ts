@@ -1,4 +1,4 @@
-const hexToRgb = (input) => {
+const hexToRgb = (input:string) => {
   input = input + "";
   input = input.replace("#", "");
   let hexRegex = /[0-9A-Fa-f]/g;

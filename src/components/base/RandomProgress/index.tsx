@@ -1,11 +1,16 @@
+import React from "react";
 import {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useAppDispatch , useSelector} from "../../../redux/hooks";
 import LinearProgress from "@mui/material/LinearProgress";
 import {progressSlice} from "../../../redux/progress/slice";
 
-const RandomProgress = (props) => {
+interface myProps{
+  color:any
+}
+
+const RandomProgress:React.FC<myProps> = (props) => {
   const {color} = props;
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch ();
   const progress = useSelector(s => s.progress);
 
   useEffect(() => {

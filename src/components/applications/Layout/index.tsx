@@ -1,4 +1,5 @@
-import {useSelector} from "react-redux";
+import React from "react"
+import {useAppDispatch , useSelector} from "../../../redux/hooks";
 import cx from "classnames";
 import Box from "@mui/material/Box";
 import Header from "../Header";
@@ -8,9 +9,9 @@ import LoginBox from "../LoginBox";
 import ValidationBox from "../ValidationBox";
 import Footer from "../Footer";
 import layoutStyles from "../../../assets/jss/components/layout";
+import {connect} from "react-redux";
 
-
-const Layout = () => {
+const Layout: React.FC = () => {
   const {classes} = layoutStyles();
   const security = useSelector(s => s.security);
   const validation = useSelector(s => s.validation);

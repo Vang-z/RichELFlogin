@@ -1,5 +1,5 @@
 import {makeStyles} from "tss-react/mui";
-import {dangerColor, grayColor} from "../base/mainStyle.js";
+import {dangerColor, grayColor} from "../base/mainStyle";
 import fonts from "../../images/fonts.png";
 
 
